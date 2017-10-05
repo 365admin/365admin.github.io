@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="apple-touch-icon" href="resources/ios/icon/icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/ios/icon/icon-76@2x.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="resources/ios/icon/icon-83.5@2x.png">
+
+    <link rel="stylesheet" type="text/css" href="http://hexatown.com/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+
+<body>
+
+    <div class="wrapper-masthead">
+        <div class="container">
+            <header class="masthead clearfix">
+  
+
+                <div class="site-info">              
+                    <a href="{{ site.baseurl }}/" class="site-avatar">
+                    
+                     <img style="height: 70px;width:auto" src="{{ site.baseurl }}/media/24626600.png" /></a>
+                    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                    <p class="site-description">{{ site.description }}</p>
+                    
+                </div>
+
+                <nav>
+                      
+                        
+                    <a href="http://365admin.net">365admin.net</a>
+                </nav>
+            </header>
+        </div>
+        
+    </div>
+
+    <div id="main" role="main" class="container">
+        {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+        <div class="container">
+            <footer class="footer">
+                {% include svg-icons.html %}
+            </footer>
+        </div>
+    </div>
+    <script>
+        window.intercomSettings = {
+            app_id: "l7f8b3hw"
+        };
+    </script>
+    <script>
+        (function() {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', intercomSettings);
+            } else {
+                var d = document;
+                var i = function() {
+                    i.c(arguments)
+                };
+                i.q = [];
+                i.c = function(args) {
+                    i.q.push(args)
+                };
+                w.Intercom = i;
+
+                function l() {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://widget.intercom.io/widget/l7f8b3hw';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                }
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })()
+    </script>
+    {% include analytics.html %}
+</body>
+
+</html>
